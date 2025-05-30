@@ -47,7 +47,7 @@
 import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue';
 import { io } from 'socket.io-client';
 
-const SOCKET_URL = 'http://172.31.41.207:8001';
+const SOCKET_URL = 'http://50.16.103.184:8001';
 let socket = null;
 let mediaRecorder = null;
 let audioChunks = [];

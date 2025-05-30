@@ -21,3 +21,4 @@ sounddevice
 faster-whisper
 scipy
 flask
+silero_vad

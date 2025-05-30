@@ -57,7 +57,7 @@ var starter = false
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 3005;
+const port = 8001;
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {
@@ -130,7 +130,7 @@ io.on("connection", (client) => {
             contentType: "audio/wav"
           });
           const vadResponse = await axios.post(
-            "http://localhost:5010/vad",
+            "http://localhost:8002/vad",
             vadForm,
             {
               headers: vadForm.getHeaders(),
@@ -171,7 +171,7 @@ io.on("connection", (client) => {
           const sttStart = Date.now();
           try {
             transcriptResponse = await axios.post(
-              "http://localhost:5010/transcribe",
+              "http://localhost:8002/transcribe",
               form,
               {
                 headers: form.getHeaders(),
@@ -224,7 +224,7 @@ io.on("connection", (client) => {
       startTime = Date.now();
 
 
-      let backUrl = "http://127.0.0.1:5009/chatbot"; // Ensure this matches the Python backend route
+      let backUrl = "http://127.0.0.1:8003/chatbot"; // Ensure this matches the Python backend route
 
 
       const llmStart = Date.now();

@@ -1,13 +1,13 @@
 module.exports = {
     apps: [
-      {
-        name: "frontend",
-        script: "npm run dev",
-        cwd: "frontend_vue",
-        env: {
-          NODE_ENV: "development"
-        }
-      },
+      // {
+      //   name: "frontend",
+      //   script: "npm run dev",
+      //   cwd: "frontend_vue",
+      //   env: {
+      //     NODE_ENV: "development"
+      //   }
+      // },
       {
         name: "faster-whisper",
         script: "python",

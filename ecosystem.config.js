@@ -11,7 +11,7 @@ module.exports = {
       {
         name: "faster-whisper",
         script: "python",
-        args: "faster-whisper.py --serve",
+        args: "faster-whisper.py --serve --host 0.0.0.0 --port 8002",
         cwd: "backend",
         env: {
           PYTHONPATH: "."

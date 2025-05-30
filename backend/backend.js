@@ -476,6 +476,6 @@ socket.on("message", async (msg) => {
 // Removed HTTP POST endpoints for /namaste, /language, /chat, /send_audio
 
 // Start the HTTP + Socket.IO server
-server.listen(port, '50.16.103.184', () => {
-  console.log(`(Socket.IO) listening on ${'50.16.103.184'}:${port}`);
+server.listen(port, 'localhost', () => {
+  console.log(`(Socket.IO) listening on ${'localhost'}:${port}`);
 });

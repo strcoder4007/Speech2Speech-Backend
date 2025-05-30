@@ -57,7 +57,7 @@ var starter = false
 const app = express();
 app.use(express.json());
 app.use(cors());
-const port = 8001;
+const port = 80;
 const server = http.createServer(app);
 const io = new SocketIOServer(server, {
   cors: {

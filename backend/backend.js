@@ -33,7 +33,7 @@ let lang; // Will be set by data from client
 var startTime = 0
 var history = []
 console.log("Connecting to server...");
-const socket = ioClient.connect("http://localhost:7006"); 
+const socket = ioClient.connect("http://172.31.41.207:7006"); 
 
 socket.on("connect", () => {
   console.log("Connected to server");
@@ -130,7 +130,7 @@ io.on("connection", (client) => {
             contentType: "audio/wav"
           });
           const vadResponse = await axios.post(
-            "http://localhost:8002/vad",
+            "http://172.31.41.207:8002/vad",
             vadForm,
             {
               headers: vadForm.getHeaders(),
@@ -171,7 +171,7 @@ io.on("connection", (client) => {
           const sttStart = Date.now();
           try {
             transcriptResponse = await axios.post(
-              "http://localhost:8002/transcribe",
+              "http://172.31.41.207:8002/transcribe",
               form,
               {
                 headers: form.getHeaders(),

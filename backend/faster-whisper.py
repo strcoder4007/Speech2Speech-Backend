@@ -93,7 +93,7 @@ def main():
     parser.add_argument("--file", type=str, help="Transcribe a given audio file")
     parser.add_argument("--serve", action="store_true", help="Run HTTP server")
     parser.add_argument("--duration", type=float, default=10, help="Recording duration (seconds)")
-    parser.add_argument("--host", type=str, default="0.0.0.0", help="Flask host")
+    parser.add_argument("--host", type=str, default="50.16.103.184", help="Flask host")
     parser.add_argument("--port", type=int, default=8002, help="Flask port")
     parser.add_argument("--lang", type=str, default=None, help="Language code for transcription (e.g., 'en', 'hi'). If not specified, attempts auto-detection.")
     args = parser.parse_args()

@@ -33,7 +33,7 @@ let lang; // Will be set by data from client
 var startTime = 0
 var history = []
 console.log("Connecting to server...");
-const socket = ioClient.connect("http://50.16.103.184:7006"); 
+const socket = ioClient.connect("http://127.0.0.1:7006"); 
 
 socket.on("connect", () => {
   console.log("Connected to server");
@@ -130,7 +130,7 @@ io.on("connection", (client) => {
             contentType: "audio/wav"
           });
           const vadResponse = await axios.post(
-            "http://50.16.103.184:8002/vad",
+            "http://127.0.0.1:8002/vad",
             vadForm,
             {
               headers: vadForm.getHeaders(),
@@ -171,7 +171,7 @@ io.on("connection", (client) => {
           const sttStart = Date.now();
           try {
             transcriptResponse = await axios.post(
-              "http://50.16.103.184:8002/transcribe",
+              "http://127.0.0.1:8002/transcribe",
               form,
               {
                 headers: form.getHeaders(),
@@ -224,7 +224,7 @@ io.on("connection", (client) => {
       startTime = Date.now();
 
 
-      let backUrl = "http://50.16.103.184:8003/chatbot"; // Ensure this matches the Python backend route
+      let backUrl = "http://127.0.0.1:8003/chatbot"; // Ensure this matches the Python backend route
 
 
       const llmStart = Date.now();

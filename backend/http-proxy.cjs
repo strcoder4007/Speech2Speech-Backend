@@ -6,8 +6,8 @@ const fs = require('fs');
 const proxy = httpProxy.createProxyServer({ target: 'http://localhost:8001' });
 
 const server = https.createServer({
-  key: fs.readFileSync('./ssl/key.pem'),
-  cert: fs.readFileSync('./ssl/cert.pem')
+  key: fs.readFileSync('../ssl/key.pem'),
+  cert: fs.readFileSync('../ssl/cert.pem')
 }, (req, res) => {
   proxy.web(req, res);
 });

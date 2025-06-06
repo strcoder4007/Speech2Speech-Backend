@@ -28,12 +28,21 @@ module.exports = {
       },
       {
         name: "backend",
-        script: "node",
-        args: "backend.js",
+        script: "python",
+        args: "app.py",
         cwd: "backend",
         env: {
-          NODE_ENV: "development"
+          PYTHONPATH: "."
         }
-      }
+      },
+      // {
+      //   name: "backend",
+      //   script: "node",
+      //   args: "backend.js",
+      //   cwd: "backend",
+      //   env: {
+      //     NODE_ENV: "development"
+      //   }
+      // }
     ]
   };
